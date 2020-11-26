@@ -22,7 +22,12 @@ class TransactionFactory extends Factory
     public function definition()
     {
         return [
-            //
+            'status' => $this->faker->numberBetween(1, 10),
+            'own_id' => $this->faker->numberBetween(1, 10),
+            'ref' => $this->faker->uuid,
+            'bank' => $this->faker->company,
+            'code' => $this->faker->uuid,
+            'amount' => $this->faker->numberBetween(10000, 1000000),
         ];
     }
 }

@@ -12,4 +12,9 @@ class CustomerAddress extends Model
         'country_id', 'street_name', 'street_address',
         'home_number', 'city', 'state', 'post_code',  'full_address'
     ];
+
+    public function country()
+    {
+        return $this->belongsTo(Country::class, 'country_id', 'id');
+    }
 }

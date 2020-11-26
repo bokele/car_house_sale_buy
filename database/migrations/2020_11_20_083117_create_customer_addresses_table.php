@@ -21,7 +21,7 @@ class CreateCustomerAddressesTable extends Migration
             $table->string('city')->nullable();
             $table->string('state')->nullable();
             $table->string('post_code')->nullable();
-            $table->string('country')->nullable();
+            $table->string('country_id')->nullable();
             $table->text('full_address')->nullable();
             $table->timestamps();
         });

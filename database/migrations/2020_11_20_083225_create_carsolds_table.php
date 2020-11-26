@@ -18,14 +18,19 @@ class CreateCarsoldsTable extends Migration
             $table->unsignedBigInteger("car_id");
             $table->double("max_price");
             $table->double("min_price");
-            $table->string("type"); // sold or rent
-            $table->string('propety_document');
-            $table->string('propety_insurance')->nullable();
-            $table->string('propety_carte_rose')->nullable();
-            $table->string('propety_document_3')->nullable();
-            $table->string('propety_document_4')->nullable();
-            $table->string('propety_document_5')->nullable();
-            $table->string('propety_document_6')->nullable();
+            $table->string('white_book');
+            $table->string('tax_clearancy')->nullable();
+            $table->string('last_insurancy')->nullable();
+            $table->string('image_0')->nullable();
+            $table->string('image_1')->nullable();
+            $table->string('image_2')->nullable();
+            $table->string('image_3')->nullable();
+            $table->string('image_4')->nullable();
+            $table->string('image_5')->nullable();
+            $table->string('image_6')->nullable();
+            $table->string('image_7')->nullable();
+            $table->string('image_8')->nullable();
+            $table->string('image_9')->nullable();
             $table->timestamps();
         });
     }

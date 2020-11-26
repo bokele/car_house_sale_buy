@@ -28,7 +28,7 @@ class InsuranceFactory extends Factory
             'ending_date' => $this->faker->date,
             'cost' => $this->faker->numberBetween(1000, 300000),
             'description' => $this->faker->text,
-            'copy_insurance' => $this->faker->file($sourceDir = '/tmp', $targetDir = "/public/insurance/")
+            'copy_insurance' => $this->faker->file($sourceDir = public_path('/tmp'), $targetDir = public_path("insurance/"))
         ];
     }
 }

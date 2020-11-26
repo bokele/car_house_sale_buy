@@ -22,7 +22,7 @@ class CreateEstatesTable extends Migration
             $table->unsignedBigInteger('address_id');
             $table->unsignedBigInteger('estate_type_id');
             $table->string('estate_name');
-            $table->float('estate_space_size');
+            $table->string('estate_space_size');
             $table->string('propety_document');
             $table->string('propety_document_1')->nullable();
             $table->string('propety_document_2')->nullable();

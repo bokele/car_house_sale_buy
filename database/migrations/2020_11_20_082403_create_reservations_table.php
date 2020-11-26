@@ -19,6 +19,7 @@ class CreateReservationsTable extends Migration
             $table->unsignedBigInteger("drop_off_location_id");
             $table->unsignedBigInteger("customer_id");
             $table->unsignedBigInteger("car_id");
+            $table->date('start_date');
             $table->timestamps();
         });
     }

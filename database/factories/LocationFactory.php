@@ -22,7 +22,12 @@ class LocationFactory extends Factory
     public function definition()
     {
         return [
-            //
+            'type' => $this->faker->randomElement(array('pick up', ' pick off')),
+            'city' => $this->faker->city,
+            'state' => $this->faker->state,
+            'zip' => $this->faker->postcode,
+            'country_id' => $this->faker->numberBetween(1, 10),
+            'full_address' => $this->faker->address
         ];
     }
 }

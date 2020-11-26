@@ -23,7 +23,7 @@ class CustomerAddressFactory extends Factory
     {
         return [
             'street_name' => $this->faker->streetName,
-            'street_address' => $this->faker->streetAddress,
+            'street_number' => $this->faker->streetAddress,
             'home_number' => $this->faker->numberBetween(1, 100),
             'city' => $this->faker->city,
             'state' => $this->faker->state,

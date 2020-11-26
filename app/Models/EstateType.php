@@ -11,4 +11,9 @@ class EstateType extends Model
     protected $fillable = [
         'name'
     ];
+
+    public function estate()
+    {
+        return $this->hasMany(Estate::class);
+    }
 }

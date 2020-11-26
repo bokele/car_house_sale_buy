@@ -29,13 +29,13 @@ class EstateFactory extends Factory
             'estate_type_id' => $this->faker->numberBetween(1, 10),
             'estate_name' => $this->faker->word,
             'estate_space_size' => $this->faker->randomElement(array('20X30', '20X30', '20X30', '20X30')),
-            'propety_document' => $this->faker->file($sourceDir = '/tmp', $targetDir = "/public/estate/"),
-            'propety_document_1' => $this->faker->file($sourceDir = '/tmp', $targetDir = "/public/estate/"),
-            'propety_document_2' => $this->faker->file($sourceDir = '/tmp', $targetDir = "/public/estate/"),
-            'propety_document_3' => $this->faker->file($sourceDir = '/tmp', $targetDir = "/public/estate/"),
-            'propety_document_4' => $this->faker->file($sourceDir = '/tmp', $targetDir = "/public/estate/"),
-            'propety_document_5' => $this->faker->file($sourceDir = '/tmp', $targetDir = "/public/estate/"),
-            'propety_document_6' => $this->faker->file($sourceDir = '/tmp', $targetDir = "/public/estate/"),
+            'propety_document' => $this->faker->file($sourceDir =  public_path('tmp/'), $targetDir =  public_path('estate/')),
+            'propety_document_1' => $this->faker->file($sourceDir =  public_path('tmp/'), $targetDir =  public_path('estate/')),
+            'propety_document_2' => $this->faker->file($sourceDir =  public_path('tmp/'), $targetDir =  public_path('estate/')),
+            'propety_document_3' => $this->faker->file($sourceDir =  public_path('tmp/'), $targetDir =  public_path('estate/')),
+            'propety_document_4' => $this->faker->file($sourceDir =  public_path('tmp/'), $targetDir =  public_path('estate/')),
+            'propety_document_5' => $this->faker->file($sourceDir =  public_path('tmp/'), $targetDir =  public_path('estate/')),
+            'propety_document_6' => $this->faker->file($sourceDir =  public_path('tmp/'), $targetDir =  public_path('estate/')),
             'estate_descriptions' => $this->faker->text
         ];
     }

@@ -4,6 +4,7 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Database\Eloquent\Relations\BelongsTo;
 
 class Carsold extends Model
 {
@@ -23,4 +24,11 @@ class Carsold extends Model
         'image_8',
         'image_9',
     ];
+
+
+
+    public function car()
+    {
+        return $this->BelongsTo(Car::class, "car_id", 'id');
+    }
 }

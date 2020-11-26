@@ -20,8 +20,8 @@ class CreateHousesTable extends Migration
             $table->unsignedBigInteger('country_id');
             $table->unsignedBigInteger('address_id');
             $table->unsignedBigInteger('type_id');
-            $table->float('estate_space_size');
-            $table->float('house_space_size');
+            $table->string('estate_space_size');
+            $table->string('house_space_size');
             $table->integer('number_of_balconies');
             $table->float('balconies_space_size');
             $table->integer('number_of_bedrooms');

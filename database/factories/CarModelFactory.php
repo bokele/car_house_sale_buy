@@ -4,6 +4,7 @@ namespace Database\Factories;
 
 use App\Models\CarModel;
 use Illuminate\Database\Eloquent\Factories\Factory;
+use Faker\Generator as FakerCar;
 
 class CarModelFactory extends Factory
 {
@@ -21,10 +22,15 @@ class CarModelFactory extends Factory
      */
     public function definition()
     {
+
+        $this->faker->addProvider(new \Faker\Provider\Fakecar($this->faker));
+        $v = $this->faker->vehicleArray();
+
         return [
-            'manufacture' => $this->faker->company,
-            'name' => $this->faker->word,
-            'code' => $this->faker->uuid
+            'brand' => $v['brand'],
+            'model' => $v['model'],
+            'vehicle_type' =>  $this->faker->vehicleType,
+            'year' => $this->faker->biasedNumberBetween(1998, 2017, 'sqrt')
         ];
     }
 }

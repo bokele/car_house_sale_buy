@@ -18,9 +18,12 @@ class CreateCarsTable extends Migration
             $table->unsignedBigInteger("model_id");
             $table->unsignedBigInteger("category_id");
             $table->unsignedBigInteger("location_id");
-            $table->string("model_code")->nullable();
-            $table->string("production_year");
-            $table->string("fuel");
+            $table->string("vehicle_fuel_type");
+            $table->string("vehicle_seat_count");
+            $table->string("vehicle_gear_box_type");
+            $table->string("vehicle_door_count");
+            $table->string("vehicle_registration");
+            $table->string("Vehicle_identification_number");
             $table->string("mileage");
             $table->string("color");
             $table->string("status");

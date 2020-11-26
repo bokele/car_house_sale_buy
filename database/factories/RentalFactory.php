@@ -22,7 +22,14 @@ class RentalFactory extends Factory
     public function definition()
     {
         return [
-            //
+            'customer_id' => $this->faker->numberBetween(1, 10),
+            'car_id' => $this->faker->numberBetween(1, 10),
+            'pick_up_location_id' => $this->faker->numberBetween(1, 10),
+            'drop_of_location_id' => $this->faker->numberBetween(1, 10),
+            'fuel_litter' => $this->faker->numberBetween(1, 100),
+            'start_date' => $this->faker->date(),
+            'end_date' => $this->faker->date(),
+            'remarque' => $this->faker->text(500)
         ];
     }
 }
